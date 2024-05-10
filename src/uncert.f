@@ -14,8 +14,8 @@ c	ipar = # fitted parameters
 c       unc = experimental uncertainties array
 
 	implicit double precision (a-h,j-z)
-	real*8 xjac(800,108),xjact(108,800),var(108,108),mat(108,108),
-     2	  matinv(108,108),wkarea(20000),x(108),stddev,unc(800),
+	real*8 xjac(2000,108),xjact(108,2000),var(108,108),mat(108,108),
+     2	  matinv(108,108),wkarea(20000),x(108),stddev,unc(2000),
      3    s95(108),s99(108),s9995(108),dmat(108)
 	integer*4 i1,i2,iy,ipar,iunc,iir,ibad,iidbd1(108),iidbd2(108),
      2    idf(108)

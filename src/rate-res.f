@@ -7,9 +7,9 @@ c       imx, imy are the array dimensions for x and y
 	real*8 x2(28),x3(28),x4(28),xb(28),xc(28),xd(28),xp(28),xt(28),
      2    xa(28),delx(40),delx2(40),delx3(40),delx4(40),
      2    kf(40),kr(40),ktfx(40),ktrp(40),ktrx(40),ktfp(40),
-     3    x(108),omc(800),y(800),ycalc(800),yt(800)
+     3    x(108),omc(2000),y(2000),ycalc(2000),yt(2000)
 	integer*4 ipx(28),icrf(40),icrr(40),icrfi(40,5),icrri(40,5),
-     2    ichk(800),itime(800),ya(800),yc(800)
+     2    ichk(2000),itime(2000),ya(2000),yc(2000)
         character*3 xpar(108),npar(108),cpar(108)
         common/rates/t,dt,ktfx,ktrx,ktfp,ktrp,tlmin,tmax,
      2    iconc,irx,icnd,icrf,icrr,icrfi,icrri,it,ipt,iout,ilog,

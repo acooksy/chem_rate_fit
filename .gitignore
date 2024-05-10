@@ -1,0 +1,9 @@
+# untracked files
+*.o
+*.out
+*.log
+rate
+rate.dat
+tools/
+test/
+*/code_bckp*

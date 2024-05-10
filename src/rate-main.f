@@ -1,5 +1,5 @@
-c       RATE.F VERSION 2.02  Oct. 10 2005
-c       copyright 2004-2005 by Andrew L. Cooksy
+c       RATE.F VERSION 2.03  Jul. 30 2018
+c       copyright 2004-2024 by Andrew L. Cooksy
 
 c       I.      VERSION NUMBERS
 c       2.03 Jul 30 2018
@@ -109,9 +109,9 @@ c*********************** MAIN PROGRAM *************************************
 c	external res
 	real*8 kf(40),kr(40),ktfx(40),ktrx(40),ktfp(40),x0(108),
      2    ktrp(40),xp(28),delx(40),delx2(40),delx3(40),delx4(40),
-     3    x(108),y(800),yt(800),omc(800),unc(800),xjac(800,108)
+     3    x(108),y(2000),yt(2000),omc(2000),unc(2000),xjac(2000,108)
 	integer*4 icrf(40),icrr(40),icrfi(40,5),icrri(40,5),ipx(28),
-     2    ifit(108),ya(800),yc(800)
+     2    ifit(108),ya(2000),yc(2000)
 	character*3 npar(108)
 	character*80 garbage,header
 
@@ -122,8 +122,8 @@ c	external res
         common/ratea/npar
         common/max/imrx,imconc,imy,imx
 
-	data imrx,imconc,imy,imx/10,10,100,10/
-c	data imrx,imconc,imy,imx/40,27,800,108/
+c        data imrx,imconc,imy,imx/10,10,100,10/
+       data imrx,imconc,imy,imx/40,27,2000,108/
 
 c	initialization
 	do i=1,imx
