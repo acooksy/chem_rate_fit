@@ -1,1 +1,1 @@
-The current version of the code is written to link to Press' least squares routine mrqmin.f and Press's matrix inversion routine gaussj.f, from Numerical Recipes, http://numerical.recipes/.
+This release uses the least squares routine lmdif from minpack.

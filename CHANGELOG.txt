@@ -1,0 +1,2 @@
+There are no longer any calls to Numerical Recipes -- the entire package should be self-contained.
+This version has been updated to Fortran 90 specifications.
