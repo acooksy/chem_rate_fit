@@ -8,3 +8,6 @@ Propagated uncertainties and correlation coefficients are reported.
 The least squares routine is limdif from Minpack.  
 
 The input file is assumed to be named "rate.dat", final output is sent to "rate.log".
+
+Install Fortran package manager fpm and run "fpm build".  To test, copy sample input 
+ files in examples/ to ./rate.dat and enter "fpm run".
