@@ -130,15 +130,21 @@
 !  lwa is the length of the work array wa in lmdif1
        lwa = itfit*iy + 5*itfit + iy
        call lmdif1(fcn, iy, itfit, xfit, fvec, tol, info, iwa, wa, lwa)
+
 ! fvec returned by lmdif1 is actually the weighted omc array
+       ssq = 0d0
        do i=1,iy
          omc(i) = fvec(i)/dsqrt(wt(i))
+         ssq = ssq + fvec(i)*fvec(i) 
        enddo
+       stddev = 0d0
+       if (iy > itfit+1) then
+         stddev = dsqrt(ssq/dfloat(iy-itfit-1))
+         stddvn = dsqrt(ssq*sumunc/(dfloat(iy-itfit-1)*dfloat(iy)))
+       endif
 
         open(newunit=ifile_log,file='rate.log',status="replace")
         write(ifile_log,900)header
-        stddev = 0d0
-        if (iy > itfit+1) stddev = dsqrt(ssq/dfloat(iy-itfit-1))
         write(ifile_log,920)ssq,ier,stddev
 ! Error message statements
         if((ier.eq.129).or.(ier.eq.132))write(ifile_log,*) &

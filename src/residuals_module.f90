@@ -283,10 +283,10 @@
          endif
         enddo
 
+! weight ssq by the experimental unceratinties
        ssq = 0d0
        do i2=1,iy
          fvec(i2) = dsqrt(wt(i2)) * (y(i2) - ycalc(i2))
-! try weighting ssq by the experimental unceratinties
          ssq = ssq + fvec(i2)*fvec(i2) 
        enddo
        stddev = 0d0
